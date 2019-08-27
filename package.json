@@ -2,7 +2,7 @@
   "name": "react-synthetic-events",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://vigneshwaran-chandrasekaran.github.io/react-synthetic-events",
+  "homepage": "https://vigneshwaran-chandrasekaran.github.io/react-synthetic-events/",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
