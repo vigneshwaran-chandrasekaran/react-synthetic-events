@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 
 export default function OnCopy() {
-
     const [copiedText, setCopiedText] = useState('');
     const [isCopied, onCopy] = useState(false);
 
@@ -25,11 +23,12 @@ export default function OnCopy() {
     };
 
     return (
-        <Jumbotron>
+        <div style={{ minHeight: '150px' }}>
+            <p className="bg-warning p-2"><strong>onCopy</strong> Event</p>
             <h4 onCopy={handleOnCopy}>Copy part or full of this string and see copied text bellow</h4>
             {isCopied ?
                 (<p>Copied Text -> <span style={{ color: 'red' }}>{copiedText}</span></p>) : (null)
             }
-        </Jumbotron>
+        </div>
     )
 }

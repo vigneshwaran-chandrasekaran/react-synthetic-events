@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import './App.css';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import { Button } from 'react-bootstrap';
-import Navbar from './components/Navbar';
+// import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+// import { Button } from 'react-bootstrap';
+// import Navbar from './components/Navbar';
 import OnCopy from './components/OnCopy';
+import OnCut from './components/OnCut';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
+      <h3 className="text-center my-3">React Synthetic Events</h3>
       <OnCopy />
+      <OnCut />
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
         <Button variant="primary">Primary</Button>
