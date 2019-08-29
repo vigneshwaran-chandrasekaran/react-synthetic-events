@@ -6,14 +6,18 @@ import './App.css';
 import OnCopy from './components/OnCopy';
 import OnCut from './components/OnCut';
 import OnPaste from './components/OnPaste';
+import AllClipboard from './components/AllClipboard';
+
 
 function App() {
   return (
-    <div className="container">
+    <div className="container mb-5">
       <h3 className="text-center my-3">React Synthetic Events</h3>
       <OnCopy />
       <OnCut />
       <OnPaste />
+      <AllClipboard />
+
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
         <Button variant="primary">Primary</Button>
