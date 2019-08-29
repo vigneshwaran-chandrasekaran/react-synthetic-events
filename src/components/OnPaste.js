@@ -27,7 +27,7 @@ export default function OnPaste() {
     return (
         <div style={{ minHeight: '150px' }}>
             <p className="bg-warning p-2"><strong>OnPaste</strong> Event</p>
-            <input onPaste={handleOnCut} type='text' style={{ width: '100%' }} defaultValue='Paste part or full of this string and see copied text bellow' />
+            <input onPaste={handleOnCut} type='text' style={{ width: '100%' }} defaultValue='Paste part or full of this string and see copied text below' />
             {isPasted ?
                 (<p>Pasted Text -> <span style={{ color: 'red' }}>{pastedText}</span></p>) : (null)
             }

@@ -27,7 +27,7 @@ export default function OnCut() {
     return (
         <div style={{ minHeight: '150px' }}>
             <p className="bg-warning p-2"><strong>OnCut</strong> Event</p>
-            <input onCut={handleOnCut} type='text' style={{ width: '100%' }} defaultValue='Cut part or full of this string and see copied text bellow' />
+            <input onCut={handleOnCut} type='text' style={{ width: '100%' }} defaultValue='Cut part or full of this string and see copied text below' />
             {isCutted ?
                 (<p>Cutted Text -> <span style={{ color: 'red' }}>{cuttedText}</span></p>) : (null)
             }
