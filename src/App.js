@@ -5,6 +5,7 @@ import './App.css';
 // import Navbar from './components/Navbar';
 import OnCopy from './components/OnCopy';
 import OnCut from './components/OnCut';
+import OnPaste from './components/OnPaste';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <h3 className="text-center my-3">React Synthetic Events</h3>
       <OnCopy />
       <OnCut />
+      <OnPaste />
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
         <Button variant="primary">Primary</Button>
