@@ -5,15 +5,10 @@ export default function OnPointer() {
     const [state, setstate] = useState({});
 
     const handleAction = (e) => {
-        console.log(typeof e);
         console.log({ e });
         e.persist();
         setstate(e);
-        console.log(e.type);
-        console.log(e.clientX);
-        console.log(e.clientY);
-        console.log('handleAction');
-    }
+    };
     return (
         <div>
             <p className="bg-warning p-2 mt-5"><strong>onPointer</strong> Event</p>
@@ -33,26 +28,23 @@ export default function OnPointer() {
                     for more details about pointer events click here
                 </a>
             </div>
-            <table className='table my-3'>
+
+            <table className='table table-bordered table-hover table-condensed table-striped my-3' >
                 <tbody>
                     <tr>
                         <th>Property</th>
                         <th>Value</th>
                     </tr>
-                    <tr>
-                        <td>type</td>
-                        <td>{state ? state.type : ''}</td>
-                    </tr>
-                    <tr>
-                        <td>clientX</td>
-                        <td>{state ? state.clientX : ''}</td>
-                    </tr>
-                    <tr>
-                        <td>clientY</td>
-                        <td>{state ? state.clientY : ''}</td>
-                    </tr>
+                    {Object.keys(state).map(key =>
+                        (typeof (state[key]) !== 'object' && typeof (state[key]) !== 'function') ?
+                            <tr key={key}>
+                                <td>{key}</td>
+                                <td>{String(state[key])}</td>
+                                {console.log(key, state[key])}
+                            </tr> : null
+                    )}
                 </tbody>
             </table>
-        </div>
+        </div >
     )
 }

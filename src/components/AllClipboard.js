@@ -33,7 +33,7 @@ export default function AllClipboard() {
             <p className="bg-warning p-2"><strong>OnCopy, OnCut, OnPaste</strong> Events</p>
             <textarea onCopy={handleOnCut} onCut={handleOnCut} onPaste={handleOnCut} cols={100} rows={5} style={{ width: '100%' }} defaultValue='Paste part or full of this string and see copied text below' />
             {isEventFired ?
-                (<p>{eventType} Event fired -> <span style={{ color: 'red' }}>{eventText}</span></p>) : (null)
+                (<p><span className='font-weight-bold'>{eventType}</span> Event fired -> <span style={{ color: 'red' }}>{eventText}</span></p>) : (null)
             }
         </div>
     )
