@@ -5,7 +5,9 @@ export default function AllClipboard() {
     const [eventType, seteventType] = useState('');
     const [isEventFired, setIsEventFired] = useState(false);
 
-    const handleOnCut = async (e) => {
+    const handleOnCut = (e) => {
+        e.persist();
+        console.log({ e });
         seteventType(e.type);
         console.log('type =>', e.type);
         console.log('type =>', e.clipboardData);

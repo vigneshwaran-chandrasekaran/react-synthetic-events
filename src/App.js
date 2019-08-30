@@ -7,7 +7,7 @@ import OnCopy from './components/OnCopy';
 import OnCut from './components/OnCut';
 import OnPaste from './components/OnPaste';
 import AllClipboard from './components/AllClipboard';
-
+import OnPointer from './components/OnPointer';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
       <OnCut />
       <OnPaste />
       <AllClipboard />
+      <OnPointer />
 
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
