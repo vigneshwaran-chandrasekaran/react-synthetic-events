@@ -8,6 +8,7 @@ import OnCut from './components/OnCut';
 import OnPaste from './components/OnPaste';
 import AllClipboard from './components/AllClipboard';
 import OnPointer from './components/OnPointer';
+import OnMouse from './components/OnMouse';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <OnPaste />
       <AllClipboard />
       <OnPointer />
+      <OnMouse />
 
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
