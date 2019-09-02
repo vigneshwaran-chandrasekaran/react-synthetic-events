@@ -11,6 +11,8 @@ import OnPointer from './components/OnPointer';
 import OnMouse from './components/OnMouse';
 import OnKeyboard from './components/OnKeyboard';
 import OnFocus from './components/OnFocus';
+import OnComposition from './components/OnComposition';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
       <OnMouse />
       <OnKeyboard />
       <OnFocus />
+      <OnComposition />
 
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
