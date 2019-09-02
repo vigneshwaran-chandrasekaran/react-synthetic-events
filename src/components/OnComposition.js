@@ -6,11 +6,9 @@ export default function AllClipboard() {
 
     const handleOnCut = (e) => {
         e.persist();
-        console.log({ e });
         seteventType(e.type);
         console.log('type =>', e.type);
-        console.log('type =>', e.clipboardData);
-        console.log('type =>', e);
+        console.log('e =>', e);
         setIsEventFired(true);
         setTimeout(() => {
             setIsEventFired(false);
@@ -19,16 +17,40 @@ export default function AllClipboard() {
 
     return (
         <div className='my-5' style={{ minHeight: '150px' }}>
-            <p className="bg-primary p-2">
-                <strong>Focus Events</strong>
+            <p className="bg-success p-2">
+                <strong>Composition Events</strong>
             </p>
-            <p>onFocus, onBlur</p>
+            <p>Composition events fire for non-latin character typing e.g (Tamil, Chinese, japanese, etc..)</p>
+            <p>onCompositionEnd, onCompositionStart, onCompositionUpdate</p>
+            <div>
+                <a href='https://blog.evanyou.me/2014/01/03/composition-event/'
+                    target='_blank'
+                    rel="noopener noreferrer"
+                >
+                    for more details about composition events click here
+                </a>
+            </div>
+            <div className='text-center'>
+                <img src='https://i.stack.imgur.com/7D5U0.gif' alt='composition-event' />
+            </div>
+            <p>Type non-latin characters to fire the Composition events</p>
             <input
-                onFocus={handleOnCut}
-                onBlur={handleOnCut}
+                onCompositionStart={handleOnCut}
                 type='text'
                 style={{ width: '100%' }}
-                defaultValue='onFocus onBlur events'
+                defaultValue='onCompositionStart ஆரம்பம்'
+            />
+            <input
+                onCompositionUpdate={handleOnCut}
+                type='text'
+                style={{ width: '100%' }}
+                defaultValue='onCompositionUpdate மாறுதல்கள்'
+            />
+            <input
+                onCompositionEnd={handleOnCut}
+                type='text'
+                style={{ width: '100%' }}
+                defaultValue='onCompositionEnd இறுதி'
             />
             {isEventFired ?
                 (<p>

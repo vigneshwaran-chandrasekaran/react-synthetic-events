@@ -26,8 +26,8 @@ export default function OnMouse() {
                 Click/touch below text to trigger mouse events
             </p>
 
-            <div class="row">
-                <div class="col">
+            <div className="row">
+                <div className="col">
                     <p onClick={handleAction}>onClick event</p>
                     <p onContextMenu={handleAction}>onContextMenu event</p>
                     <p onDoubleClick={handleAction}>onDoubleClick event</p>
@@ -47,7 +47,7 @@ export default function OnMouse() {
                     <p onMouseOver={handleAction}>onMouseOver event</p>
                     <p onMouseUp={handleAction}>onMouseUp event</p>
                 </div>
-                <div class="col">
+                <div className="col">
                     <table className='table table-bordered table-hover table-condensed table-striped my-3' >
                         <tbody>
                             <tr>
