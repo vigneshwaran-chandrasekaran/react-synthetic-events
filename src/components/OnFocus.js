@@ -18,23 +18,17 @@ export default function AllClipboard() {
     };
 
     return (
-        <div style={{ minHeight: '150px' }}>
-            <p className="bg-warning p-2">
-                <strong>Keyboard Events</strong>
+        <div className='my-5' style={{ minHeight: '150px' }}>
+            <p className="bg-primary p-2">
+                <strong>Focus Events</strong>
             </p>
-            <p>onKeyDown, onKeyPress, onKeyUp</p>
+            <p>onFocus, onBlur</p>
             <input
-                onKeyDown={handleOnCut}
+                onFocus={handleOnCut}
+                onBlur={handleOnCut}
                 type='text'
                 style={{ width: '100%' }}
-                defaultValue='onKeyDown events'
-            />
-            <input
-                onKeyPress={handleOnCut}
-                onKeyUp={handleOnCut}
-                type='text'
-                style={{ width: '100%' }}
-                defaultValue='onKeyPress onKeyUp events'
+                defaultValue='onFocus onBlur events'
             />
             {isEventFired ?
                 (<p>
