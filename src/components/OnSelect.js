@@ -6,10 +6,8 @@ export default function AllClipboard() {
 
     const handleOnCut = (e) => {
         e.persist();
-        console.log({ e });
         seteventType(e.type);
         console.log('type =>', e.type);
-        console.log('type =>', e.clipboardData);
         console.log('type =>', e);
         setIsEventFired(true);
         setTimeout(() => {
@@ -20,15 +18,15 @@ export default function AllClipboard() {
     return (
         <div className='my-5' style={{ minHeight: '150px' }}>
             <p className="bg-primary p-2">
-                <strong>Focus Events</strong>
+                <strong>Selection Events</strong>
             </p>
-            <p>onFocus, onBlur</p>
+            <p>onSelect</p>
+            <p>Select below text box text to fire the onSelect event</p>
             <input
-                onFocus={handleOnCut}
-                onBlur={handleOnCut}
+                onSelect={handleOnCut}
                 type='text'
                 style={{ width: '100%' }}
-                defaultValue='onFocus onBlur events'
+                defaultValue='onSelect events'
             />
             {isEventFired ?
                 (<p>

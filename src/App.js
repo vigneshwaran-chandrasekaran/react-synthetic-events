@@ -12,6 +12,7 @@ import OnMouse from './components/OnMouse';
 import OnKeyboard from './components/OnKeyboard';
 import OnFocus from './components/OnFocus';
 import OnComposition from './components/OnComposition';
+import OnSelect from './components/OnSelect';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <OnKeyboard />
       <OnFocus />
       <OnComposition />
+      <OnSelect />
 
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
