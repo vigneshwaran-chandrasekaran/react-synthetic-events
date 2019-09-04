@@ -22,6 +22,7 @@ export default function UiEvents() {
             </p>
             <p>onScroll</p>
             <p>Scroll the below div to fire UI event (scroll event)</p>
+            <p>Wheel and Scroll events basically similar one, wheel event only fire when mouse scrolled, but sroll event fire using mouse wheel and also using mouse drag (both ways)</p>
             <div
                 onScroll={handleScroll}
                 style={{ maxHeight: '150px', scrollBehavior: 'smooth', overflow: 'auto' }}>

@@ -14,6 +14,7 @@ import OnFocus from './components/OnFocus';
 import OnComposition from './components/OnComposition';
 import OnSelect from './components/OnSelect';
 import UiEvents from './components/UiEvents';
+import WheelEvents from './components/WheelEvents';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <OnComposition />
       <OnSelect />
       <UiEvents />
+      <WheelEvents />
 
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
