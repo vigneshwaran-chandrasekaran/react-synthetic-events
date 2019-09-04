@@ -30,6 +30,7 @@ function App() {
       <OnFocus />
       <OnComposition />
       <OnSelect />
+      <UiEvents />
 
       {/* <Navbar /> */}
       {/* <ButtonToolbar>
