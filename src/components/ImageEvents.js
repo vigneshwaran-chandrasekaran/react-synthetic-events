@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 export default function UiEvents() {
     const [eventType, seteventType] = useState('');
     const [isEventFired, setIsEventFired] = useState(false);
+    const [isErrorEventFired, setIsErrorEventFired] = useState(false);
 
-    const handleScroll = (e) => {
+    const handleEvent = (e) => {
         e.persist();
         seteventType(e.type);
         console.log('type =>', e.type);
@@ -15,28 +16,40 @@ export default function UiEvents() {
         }, 5000);
     };
 
+    const handleErrorEvent = (e) => {
+        e.persist();
+        seteventType(e.type);
+        console.log('type =>', e.type);
+        console.log('type =>', e);
+        setIsErrorEventFired(true);
+        setTimeout(() => {
+            setIsErrorEventFired(false);
+        }, 5000);
+    };
+
     return (
         <div className='my-5' style={{ minHeight: '150px' }}>
             <p className="bg-primary p-2">
-                <strong>UI Events</strong>
+                <strong>Image Events</strong>
             </p>
-            <p>onScroll</p>
-            <p>Scroll the below div to fire UI event (scroll event)</p>
-            <p>Wheel and Scroll events basically similar one, wheel event only fire when mouse scrolled, but sroll event fire using mouse wheel and also using mouse drag (both ways)</p>
-            <div
-                onScroll={handleScroll}
-                style={{ maxHeight: '150px', scrollBehavior: 'smooth', overflow: 'auto' }}>
-                <br />
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                <br />
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            <p>onLoad onError</p>
+            <div className='text-center'>
+                <img onLoad={handleEvent} src='https://picsum.photos/100' alt='load-event' />
+                {isEventFired ?
+                    (<span className='my-3'>
+                        <span className='font-weight-bol'>{eventType}</span> Event fired
+                </span>) : (null)
+                }
             </div>
 
-            {isEventFired ?
-                (<p className='my-3'>
-                    <span className='font-weight-bold'>{eventType}</span> Event fired
-                </p>) : (null)
-            }
+            <div className='text-center'>
+                <img onError={handleErrorEvent} src='https://picsum.photos-error/100' alt='error-event' />
+                {isErrorEventFired ?
+                    (<span className='my-3'>
+                        <span className='font-weight-bol'>{eventType}</span> Event fired
+                </span>) : (null)
+                }
+            </div>
         </div>
     )
 }
