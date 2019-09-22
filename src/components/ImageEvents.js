@@ -4,6 +4,7 @@ export default function UiEvents() {
     const [eventType, seteventType] = useState('');
     const [isEventFired, setIsEventFired] = useState(false);
     const [isErrorEventFired, setIsErrorEventFired] = useState(false);
+    const [src, setSrc] = useState('https://picsum.photos-error/100')
 
     const handleEvent = (e) => {
         e.persist();
@@ -27,6 +28,10 @@ export default function UiEvents() {
         }, 5000);
     };
 
+    const handleErrorImage = () => {
+        setSrc('https://picsum.photos/200');
+    };
+
     return (
         <div className='my-5' style={{ minHeight: '150px' }}>
             <p className="bg-primary p-2">
@@ -41,7 +46,7 @@ export default function UiEvents() {
                 </span>) : (null)
                 }
             </div>
-
+            <hr />
             <div className='text-center'>
                 <img onError={handleErrorEvent} src='https://picsum.photos-error/100' alt='error-event' />
                 {isErrorEventFired ?
@@ -50,6 +55,12 @@ export default function UiEvents() {
                 </span>) : (null)
                 }
             </div>
+            <hr />
+            <div className='text-center'>
+                <p>On initial load, src image is error image, so onError event will replace new image</p>
+                <img onError={handleErrorImage} src={src} alt='error-event' />
+            </div>
+            <hr />
         </div>
     )
 }
