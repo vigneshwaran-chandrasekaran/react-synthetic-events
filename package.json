@@ -5,9 +5,9 @@
   "homepage": "https://vigneshwaran-chandrasekaran.github.io/react-synthetic-events/",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "react": "^16.10.2",
+    "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
-    "react-dom": "^16.10.2",
+    "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.1"
   },
