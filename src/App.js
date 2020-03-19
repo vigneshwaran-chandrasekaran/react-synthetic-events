@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 // import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 // import { Button } from 'react-bootstrap';
@@ -22,35 +23,53 @@ import {
 
 function App() {
   return (
-    <div className="container mb-5">
-      <h3 className="text-center my-3">React Synthetic Events</h3>
-      <OnCopy />
-      <OnCut />
-      <OnPaste />
-      <AllClipboard />
-      <OnPointer />
-      <OnMouse />
-      <OnKeyboard />
-      <OnFocus />
-      <OnComposition />
-      <OnSelect />
-      <UiEvents />
-      <WheelEvents />
-      <ImageEvents />
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/OnCopy">OnCopy</Link>
+            </li>
+            <li>
+              <Link to="/OnCut">OnCut</Link>
+            </li>
+            <li>
+              <Link to="/OnPaste">OnPaste</Link>
+            </li>
+          </ul>
+        </nav>
 
-      {/* <Navbar /> */}
-      {/* <ButtonToolbar>
-        <Button variant="primary">Primary</Button>
-        <Button variant="secondary">Secondary</Button>
-        <Button variant="success">Success</Button>
-        <Button variant="warning">Warning</Button>
-        <Button variant="danger">Danger</Button>
-        <Button variant="info">Info</Button>
-        <Button variant="light">Light</Button>
-        <Button variant="dark">Dark</Button>
-        <Button variant="link">Link</Button>
-      </ButtonToolbar> */}
-    </div>
+        {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/OnCopy">
+            <OnCopy />
+          </Route>
+          <Route path="/OnCut">
+            <OnCut />
+          </Route>
+          <Route path="/OnPaste">
+            <OnPaste />
+          </Route>
+        </Switch>
+
+        <div className="container mb-5">
+          <h3 className="text-center my-3">React Synthetic Events</h3>
+          <AllClipboard />
+          <OnPointer />
+          <OnMouse />
+          <OnKeyboard />
+          <OnFocus />
+          <OnComposition />
+          <OnSelect />
+          <UiEvents />
+          <WheelEvents />
+          <ImageEvents />
+
+          {/* <Navbar /> */}
+        </div>
+      </div>
+    </Router>
   );
 }
 
