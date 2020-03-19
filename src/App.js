@@ -1,22 +1,22 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 // import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 // import { Button } from 'react-bootstrap';
 // import Navbar from './components/Navbar';
-import OnCopy from './components/OnCopy';
-import OnCut from './components/OnCut';
-import OnPaste from './components/OnPaste';
-import AllClipboard from './components/AllClipboard';
-import OnPointer from './components/OnPointer';
-import OnMouse from './components/OnMouse';
-import OnKeyboard from './components/OnKeyboard';
-import OnFocus from './components/OnFocus';
-import OnComposition from './components/OnComposition';
-import OnSelect from './components/OnSelect';
-import UiEvents from './components/UiEvents';
-import WheelEvents from './components/WheelEvents';
-import ImageEvents from './components/ImageEvents';
+import OnCopy from "./components/OnCopy";
+import OnCut from "./components/OnCut";
+import OnPaste from "./components/OnPaste";
+import OnPointer from "./components/OnPointer";
+import OnMouse from "./components/OnMouse";
+import OnKeyboard from "./components/OnKeyboard";
+import OnFocus from "./components/OnFocus";
+import OnComposition from "./components/OnComposition";
+import OnSelect from "./components/OnSelect";
+import UiEvents from "./components/UiEvents";
+import WheelEvents from "./components/WheelEvents";
+import ImageEvents from "./components/ImageEvents";
 
+import { AllClipboard } from "./components";
 
 function App() {
   return (
