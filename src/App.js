@@ -37,7 +37,10 @@ function App() {
               <Link to="/OnPaste">OnPaste</Link>
             </li>
             <li>
-              <Link to="/AllClipboard">AllClipboard</Link>
+              <Link to="/AllClipboard">AllClipboards</Link>
+            </li>
+            <li>
+              <Link to="/OnPointer">OnPointer</Link>
             </li>
           </ul>
         </nav>
@@ -57,12 +60,13 @@ function App() {
           <Route path="/AllClipboard">
             <AllClipboard />
           </Route>
+          <Route path="/OnPointer">
+            <OnPointer />
+          </Route>
         </Switch>
 
         <div className="container mb-5">
           <h3 className="text-center my-3">React Synthetic Events</h3>
-          <AllClipboard />
-          <OnPointer />
           <OnMouse />
           <OnKeyboard />
           <OnFocus />
