@@ -42,6 +42,9 @@ function App() {
             <li>
               <Link to="/OnPointer">OnPointer</Link>
             </li>
+            <li>
+              <Link to="/OnMouse">OnMouse</Link>
+            </li>
           </ul>
         </nav>
 
@@ -63,11 +66,13 @@ function App() {
           <Route path="/OnPointer">
             <OnPointer />
           </Route>
+          <Route path="/OnMouse">
+            <OnMouse />
+          </Route>
         </Switch>
 
         <div className="container mb-5">
           <h3 className="text-center my-3">React Synthetic Events</h3>
-          <OnMouse />
           <OnKeyboard />
           <OnFocus />
           <OnComposition />
