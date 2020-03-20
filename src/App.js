@@ -36,6 +36,9 @@ function App() {
             <li>
               <Link to="/OnPaste">OnPaste</Link>
             </li>
+            <li>
+              <Link to="/AllClipboard">AllClipboard</Link>
+            </li>
           </ul>
         </nav>
 
@@ -50,6 +53,9 @@ function App() {
           </Route>
           <Route path="/OnPaste">
             <OnPaste />
+          </Route>
+          <Route path="/AllClipboard">
+            <AllClipboard />
           </Route>
         </Switch>
 
