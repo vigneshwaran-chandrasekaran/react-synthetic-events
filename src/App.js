@@ -51,6 +51,9 @@ function App() {
             <li>
               <Link to="/OnFocus">OnFocus</Link>
             </li>
+            <li>
+              <Link to="/OnComposition">OnComposition</Link>
+            </li>
           </ul>
         </nav>
 
@@ -80,6 +83,9 @@ function App() {
           </Route>
           <Route path="/OnFocus">
             <OnFocus />
+          </Route>
+          <Route path="/OnComposition">
+            <OnComposition />
           </Route>
         </Switch>
 
