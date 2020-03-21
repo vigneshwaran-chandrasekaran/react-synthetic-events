@@ -54,6 +54,12 @@ function App() {
             <li>
               <Link to="/OnComposition">OnComposition</Link>
             </li>
+            <li>
+              <Link to="/OnSelect">OnSelect</Link>
+            </li>
+            <li>
+              <Link to="/UiEvents">UiEvents</Link>
+            </li>
           </ul>
         </nav>
 
@@ -87,13 +93,16 @@ function App() {
           <Route path="/OnComposition">
             <OnComposition />
           </Route>
+          <Route path="/OnSelect">
+            <OnSelect />
+          </Route>
+          <Route path="/UiEvents">
+            <UiEvents />
+          </Route>
         </Switch>
 
         <div className="container mb-5">
           <h3 className="text-center my-3">React Synthetic Events</h3>
-          <OnComposition />
-          <OnSelect />
-          <UiEvents />
           <WheelEvents />
           <ImageEvents />
           {/* <Navbar /> */}
