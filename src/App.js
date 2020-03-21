@@ -48,6 +48,9 @@ function App() {
             <li>
               <Link to="/OnKeyboard">OnKeyboard</Link>
             </li>
+            <li>
+              <Link to="/OnFocus">OnFocus</Link>
+            </li>
           </ul>
         </nav>
 
@@ -75,11 +78,13 @@ function App() {
           <Route path="/OnKeyboard">
             <OnKeyboard />
           </Route>
+          <Route path="/OnFocus">
+            <OnFocus />
+          </Route>
         </Switch>
 
         <div className="container mb-5">
           <h3 className="text-center my-3">React Synthetic Events</h3>
-          <OnFocus />
           <OnComposition />
           <OnSelect />
           <UiEvents />
