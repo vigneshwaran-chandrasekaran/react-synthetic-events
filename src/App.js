@@ -25,6 +25,8 @@ function App() {
   return (
     <Router>
       <div className="container mb-5">
+        <h3 className="text-center my-3">React Synthetic Events</h3>
+        {/* <Navbar /> */}
         <nav>
           <ul>
             <li>
@@ -59,6 +61,12 @@ function App() {
             </li>
             <li>
               <Link to="/UiEvents">UiEvents</Link>
+            </li>
+            <li>
+              <Link to="/WheelEvents">WheelEvents</Link>
+            </li>
+            <li>
+              <Link to="/ImageEvents">ImageEvents</Link>
             </li>
           </ul>
         </nav>
@@ -99,14 +107,13 @@ function App() {
           <Route path="/UiEvents">
             <UiEvents />
           </Route>
+          <Route path="/WheelEvents">
+            <WheelEvents />
+          </Route>
+          <Route path="/ImageEvents">
+            <ImageEvents />
+          </Route>
         </Switch>
-
-        <div className="container mb-5">
-          <h3 className="text-center my-3">React Synthetic Events</h3>
-          <WheelEvents />
-          <ImageEvents />
-          {/* <Navbar /> */}
-        </div>
       </div>
     </Router>
   );
