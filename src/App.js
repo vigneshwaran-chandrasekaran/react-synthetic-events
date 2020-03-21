@@ -24,7 +24,7 @@ import {
 function App() {
   return (
     <Router>
-      <div>
+      <div className="container mb-5">
         <nav>
           <ul>
             <li>
